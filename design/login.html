@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatFuture 登录</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <div class="intro-panel">
+        <header class="brand">
+          <div class="logo">CF</div>
+          <div class="brand-text">
+            <span class="brand-name">ChatFuture</span>
+            <span class="brand-slogan">探索自我 · 启航未来</span>
+          </div>
+        </header>
+        <main class="intro-content">
+          <h1>欢迎回到你的成长实验室</h1>
+          <p>
+            ChatFuture 通过 AI 导师和心理学引导，让你在安全、信任的空间中探索兴趣、能力与职业方向。
+          </p>
+          <ul class="value-list">
+            <li>
+              <span class="icon" aria-hidden="true">💡</span>
+              <div>
+                <h2>洞察自我</h2>
+                <p>兴趣、性格与价值观多维度自我画像。</p>
+              </div>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">🧭</span>
+              <div>
+                <h2>规划路径</h2>
+                <p>个性化成长路线与可视化目标追踪。</p>
+              </div>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">🤝</span>
+              <div>
+                <h2>陪伴成长</h2>
+                <p>AI 导师小智，始终与您同行。</p>
+              </div>
+            </li>
+          </ul>
+        </main>
+        <footer class="intro-footer">
+          <p>“了解自己，是迈向未来的第一步。”</p>
+        </footer>
+      </div>
+      <div class="form-panel" role="main">
+        <div class="form-card">
+          <h2>登录你的探索之旅</h2>
+          <p class="subtitle">还没有账号？<a href="#">创建学生档案</a></p>
+          <div class="login-options">
+            <button type="button" class="wechat-button" aria-label="使用微信登录">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wechat/wechat-original.svg"
+                alt="微信图标"
+                loading="lazy"
+              />
+              微信扫码登录
+            </button>
+            <div class="phone-login" aria-labelledby="phone-login-title">
+              <h3 id="phone-login-title">手机号登录</h3>
+              <p class="phone-hint">输入手机号并完成短信验证码验证后即可登录。</p>
+              <form>
+                <label class="input-group" for="phone">
+                  <span>手机号码</span>
+                  <div class="phone-field">
+                    <span class="country-code" aria-hidden="true">+86</span>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      inputmode="numeric"
+                      pattern="[0-9]{11}"
+                      placeholder="请输入 11 位手机号"
+                      required
+                      aria-describedby="phone-login-title"
+                    />
+                  </div>
+                </label>
+                <div class="input-group">
+                  <label for="verification">短信验证码</label>
+                  <div class="verification-field">
+                    <input
+                      id="verification"
+                      name="verification"
+                      type="text"
+                      inputmode="numeric"
+                      pattern="[0-9]{4,6}"
+                      placeholder="输入收到的验证码"
+                      required
+                    />
+                    <button type="button" class="send-code">发送验证码</button>
+                  </div>
+                </div>
+                <button type="submit" class="primary-button">验证并登录</button>
+              </form>
+            </div>
+          </div>
+          <p class="consent">
+            登录即表示你同意我们的
+            <a href="#">服务条款</a>与<a href="#">隐私保护</a>。
+          </p>
+        </div>
+        <div class="wellbeing-tip" aria-live="polite">
+          <h3>今日心理小贴士</h3>
+          <p>
+            深呼吸 3 次，让注意力回到当下。保持觉察，才能更好地倾听内心真正的声音。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="background-ornament" aria-hidden="true">
+      <div class="orb orb--sunrise"></div>
+      <div class="orb orb--insight"></div>
+      <div class="grid"></div>
+    </div>
+  </body>
+</html>
