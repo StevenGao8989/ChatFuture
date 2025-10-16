@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatFuture 邀请注册</title>
+    <style>
+        body { margin: 0; padding: 20px; font-family: Arial, sans-serif; background: #f0fdf4; }
+        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #22c55e, #16a34a); padding: 30px; text-align: center; color: white; }
+        .logo { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        .content { padding: 40px 30px; text-align: center; }
+        .title { font-size: 24px; color: #1f2937; margin-bottom: 20px; }
+        .subtitle { color: #6b7280; margin-bottom: 30px; }
+        .invite-box { background: #f0fdf4; border: 2px solid #22c55e; border-radius: 12px; padding: 20px; margin: 20px 0; }
+        .inviter { font-size: 18px; font-weight: bold; color: #16a34a; margin-bottom: 15px; }
+        .invite-message { color: #6b7280; font-size: 16px; line-height: 1.5; margin-bottom: 20px; }
+        .btn { display: inline-block; background: #22c55e; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 10px 0; }
+        .footer { background: #f9fafb; padding: 20px; text-align: center; color: #6b7280; font-size: 12px; }
+        .notice { background: #e0f2fe; border: 1px solid #0ea5e9; border-radius: 8px; padding: 15px; margin: 20px 0; }
+        .notice-title { color: #0c4a6e; font-weight: bold; margin-bottom: 5px; }
+        .notice-text { color: #075985; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">✨ ChatFuture</div>
+            <div>您收到了来自ChatFuture的邀请</div>
+        </div>
+        
+        <div class="content">
+            <h1 class="title">邀请您加入ChatFuture</h1>
+            <p class="subtitle">探索AI驱动的职业规划与形象生成平台</p>
+            
+            <div class="invite-box">
+                <div class="inviter">来自：{{ .InvitedByEmail }}</div>
+                <div class="invite-message">
+                    您已被邀请加入ChatFuture平台，这是一个专业的AI职业规划与形象生成平台。
+                    在这里，您可以：
+                    <br>• 进行专业的职业兴趣测评
+                    <br>• 获得个性化的职业建议
+                    <br>• 生成专业的职业形象
+                    <br>• 探索更多职业可能性
+                </div>
+                <a href="{{ .ConfirmationURL }}" class="btn">接受邀请并注册</a>
+            </div>
+            
+            <div class="notice">
+                <div class="notice-title">🎯 关于ChatFuture</div>
+                <div class="notice-text">我们致力于通过AI技术帮助每个人发现最适合的职业道路，开启更美好的职业生涯。</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div>如果您不想加入，请忽略此邮件。</div>
+            <div style="margin-top: 5px; font-weight: bold; color: #22c55e;">ChatFuture · AI职业规划与形象生成平台</div>
+        </div>
+    </div>
+</body>
+</html>

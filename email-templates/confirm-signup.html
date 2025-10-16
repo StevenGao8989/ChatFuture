@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatFuture 邮箱验证</title>
+    <style>
+        body { margin: 0; padding: 20px; font-family: Arial, sans-serif; background: #f0fdf4; }
+        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #22c55e, #16a34a); padding: 30px; text-align: center; color: white; }
+        .logo { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        .content { padding: 40px 30px; text-align: center; }
+        .title { font-size: 24px; color: #1f2937; margin-bottom: 20px; }
+        .subtitle { color: #6b7280; margin-bottom: 30px; }
+        .code-box { background: #f0fdf4; border: 2px solid #22c55e; border-radius: 12px; padding: 20px; margin: 20px 0; }
+        .verification-code { font-size: 32px; font-weight: bold; color: #16a34a; letter-spacing: 4px; }
+        .hint { color: #6b7280; font-size: 14px; margin-top: 15px; }
+        .footer { background: #f9fafb; padding: 20px; text-align: center; color: #6b7280; font-size: 12px; }
+        .notice { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 15px; margin: 20px 0; }
+        .notice-title { color: #92400e; font-weight: bold; margin-bottom: 5px; }
+        .notice-text { color: #78350f; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">✨ ChatFuture</div>
+            <div>欢迎加入，{{ .Email }}</div>
+        </div>
+        
+        <div class="content">
+            <h1 class="title">邮箱验证码</h1>
+            <p class="subtitle">请使用以下验证码完成注册验证</p>
+            
+            <div class="code-box">
+                <div class="verification-code">{{ .Token }}</div>
+                <div class="hint">请将验证码输入到注册页面</div>
+            </div>
+            
+            <div class="notice">
+                <div class="notice-title">🎉 欢迎加入ChatFuture</div>
+                <div class="notice-text">验证成功后，您就可以开始探索AI职业规划之旅了！</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div>如果您没有注册账户，请忽略此邮件。</div>
+            <div style="margin-top: 5px; font-weight: bold; color: #22c55e;">ChatFuture · AI职业规划与形象生成平台</div>
+        </div>
+    </div>
+</body>
+</html>
